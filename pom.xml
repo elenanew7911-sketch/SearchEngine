@@ -89,6 +89,7 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/morph-1.5.jar</systemPath>
         </dependency>
+
         <dependency>
             <groupId>org.apache.lucene.morphology</groupId>
             <artifactId>russian</artifactId>
