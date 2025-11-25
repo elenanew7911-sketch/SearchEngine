@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: Bologova_137
+    url: jdbc:mysql://localhost:3306/search_engine?createDatabaseIfNotExist=true&useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 10
+      connection-timeout: 60000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+        batch_versioned_data: false
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+indexing-settings:
+  sites:
+    - url: https://playback.ru
+      name: PlayBack.Ru
+#    - url: https://ipfran.ru
+#      name: Институт прикладной физики Российской академии наук
+#    - url: https://www.svetlovka.ru
+#      name: Светловка
+#    - url: https://www.skillbox.ru
+#      name: Skillbox
+
+

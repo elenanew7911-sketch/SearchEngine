@@ -1,0 +1,55 @@
+### Тестирование API эндпоинтов SearchEngine
+
+### 1. Получение статистики
+GET http://localhost:8080/api/statistics
+Accept: application/json
+
+###
+
+### 2. Запуск индексации
+GET http://localhost:8080/api/startIndexing
+Accept: application/json
+
+###
+
+### 3. Остановка индексации
+GET http://localhost:8080/api/stopIndexing
+Accept: application/json
+
+###
+
+### 4. Индексация конкретной страницы
+POST http://localhost:8080/api/indexPage?url=https://skillbox.ru
+Accept: application/json
+
+###
+
+### 4.1. Индексация конкретной страницы (альтернативный пример)
+POST http://localhost:8080/api/indexPage?url=https://skillbox.ru/courses/
+Accept: application/json
+
+###
+
+### 5. Поиск (минимальные параметры)
+GET http://localhost:8080/api/search?query=разработчик
+Accept: application/json
+
+###
+
+### 5.1. Поиск с указанием сайта
+GET http://localhost:8080/api/search?query=ясли&site=https://skillbox.ru
+Accept: application/json
+
+###
+
+### 5.2. Поиск с пагинацией
+GET http://localhost:8080/api/search?query=ясли&offset=0&limit=10
+Accept: application/json
+
+###
+
+### 5.3. Поиск с полным набором параметров
+GET http://localhost:8080/api/search?query=ясинский&site=https://skillbox.ru&offset=0&limit=20
+Accept: application/json
+
+###
